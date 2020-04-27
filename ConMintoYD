@@ -1,0 +1,27 @@
+import javax.swing.JOptionPane;
+public class ConMintoYD  
+{
+	public static void main(String args[])
+	{
+		Long mins=Long.parseLong(JOptionPane.showInputDialog(null,"Enter the minutes:"));
+		Conversion(mins);
+	}
+	public static void Conversion(Long mins)
+	{
+		Long years,days;
+		if (mins<0)
+		{
+			JOptionPane.showMessageDialog(null,"Please enter minutes...!!");
+		}
+		else
+		{
+			years=mins/525600;
+			System.out.println("Years:"+years);
+			days=mins%525600;
+			System.out.println("Days:"+days);
+			days=days/1440;
+			System.out.println("Days:"+days);
+			System.out.println(mins+" minutes = "+years+" years and "+days+" days");
+		}
+	}
+}
